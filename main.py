@@ -1,7 +1,7 @@
 import streamlit as st
 from openai import OpenAI
 import requests
-import re
+import regex as re
 
 def get_song_recommendations(api_key, song_details):
     """Get song recommendations based on the provided list of songs."""

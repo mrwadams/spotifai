@@ -1,4 +1,4 @@
 openai
-re
+regex
 requests
 streamlit
