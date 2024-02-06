@@ -2,6 +2,21 @@ import streamlit as st
 from openai import OpenAI
 import requests
 import regex as re
+import os
+import dotenv
+
+
+# Load environment variables if present in the .env file
+if os.path.exists(".env"):
+    dotenv.load_dotenv()
+    st.session_state.spotify_client_id = os.getenv("CLIENT_ID")
+    st.session_state.spotify_client_secret = os.getenv("CLIENT_SECRET")
+    st.session_state.openai_api_key = os.getenv("OPENAI_API_KEY")
+
+else:
+    st.session_state.spotify_client_id = None
+    st.session_state.spotify_client_secret = None
+    st.session_state.openai_api_key = None
 
 def get_song_recommendations(api_key, song_details):
     """Get song recommendations based on the provided list of songs."""
