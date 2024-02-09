@@ -23,7 +23,7 @@ def get_song_recommendations(api_key, song_details):
     
     # Constructing the prompt
     prompt = ("I have a playlist of songs here that the user really likes. The user is open to exploring similar songs or artists. "
-              "Could you suggest some tracks that have a similar vibe or feel? Here's the playlist:\n\n")
+              "Could you suggest some tracks that have a similar vibe or feel? Choose from lesser known artists, or lesser known tracks by big artists. Here's the playlist:\n\n")
 
     # Listing the songs
     for song in song_details:
